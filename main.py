@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .models import User, Gender, Role
+from models import User, Gender, Role
 from typing import List
 from uuid import uuid4
 
@@ -15,3 +15,8 @@ db: List[User] = [
 @app.get('/')
 def root():
     return {"message": "Hello World"}
+
+
+@app.get('/api/v1/users')
+async def fetch_users():
+    return db

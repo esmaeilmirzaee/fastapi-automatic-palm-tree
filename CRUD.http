@@ -14,3 +14,12 @@ accept: application/json
 
 ### get users
 GET http://localhost:8000/api/v1/users/
+
+
+### update a user
+PUT http://localhost:8000/api/v1/users/522e2967-75e4-48e9-a922-6805ca248e66
+Content-Type: application/json
+
+{
+    "roles": ["admin"]
+}
